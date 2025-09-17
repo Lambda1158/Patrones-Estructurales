@@ -8,6 +8,9 @@ import org.example.facade.*;
 import org.example.flyweight.*;
 import org.example.proxy.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // ===== MAIN CLASS PARA PROBAR TODO =====
 public class Main {
     public static void main(String[] args) {

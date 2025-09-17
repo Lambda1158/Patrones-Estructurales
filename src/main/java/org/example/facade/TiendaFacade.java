@@ -4,32 +4,10 @@ package org.example.facade;
 // Patrón Facade: Proporciona una interfaz simplificada
 // para un conjunto de clases complejas del subsistema.
 
-// Subsistemas complejos
-class Carrito {
-    public void agregarProducto(String producto) {
-        System.out.println("🛒 Producto agregado al carrito: " + producto);
-    }
 
-    public void calcularTotal() {
-        System.out.println("💰 Calculando total del carrito...");
-    }
-}
-
-class Pago {
-    public boolean procesarPago(double monto) {
-        System.out.println("💳 Procesando pago de $" + monto);
-        return true; // Simulamos pago exitoso
-    }
-}
-
-class Envio {
-    public void coordinarEntrega(String direccion) {
-        System.out.println("🚚 Coordinando envío a: " + direccion);
-    }
-}
 
 // FACADE: Simplifica la interacción con los subsistemas
-class TiendaFacade {
+public class TiendaFacade {
     private Carrito carrito;
     private Pago pago;
     private Envio envio;

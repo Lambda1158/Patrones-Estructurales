@@ -1,41 +1,8 @@
 package org.example.proxy;
 
-// ===== EJERCICIO 6 - PROXY =====
-// Patrón Proxy: Proporciona un sustituto para controlar
-// el acceso a otro objeto.
-
-// Interfaz común
-interface Archivo {
-    void abrir();
-    String leer();
-}
-
-// Objeto real que queremos proteger
-class ArchivoReal implements Archivo {
-    private String nombreArchivo;
-
-    public ArchivoReal(String nombreArchivo) {
-        this.nombreArchivo = nombreArchivo;
-        cargarArchivo();
-    }
-
-    private void cargarArchivo() {
-        System.out.println("📁 Cargando archivo: " + nombreArchivo);
-    }
-
-    @Override
-    public void abrir() {
-        System.out.println("📖 Abriendo archivo: " + nombreArchivo);
-    }
-
-    @Override
-    public String leer() {
-        return "Contenido del archivo " + nombreArchivo;
-    }
-}
 
 // PROXY: Controla el acceso al objeto real
-class ArchivoProxy implements Archivo {
+public class ArchivoProxy implements Archivo {
     private ArchivoReal archivoReal;
     private String nombreArchivo;
     private String usuario;
